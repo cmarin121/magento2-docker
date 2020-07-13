@@ -26,7 +26,7 @@ mg2_logo
 sleep 1
 cd ~/Documents
 mkdir .mymagento && cd .mymagento
-git clone https://github.com/zerocool1978/magento2-docker.git
+git clone https://github.com/cmarin121/magento2-docker.git
 sleep 1
 cd magento2-docker/
 sleep 1
