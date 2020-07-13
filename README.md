@@ -28,7 +28,7 @@ This configuration has been tested on macOS. Linux based systems still require t
 To install zerocool78 toolset to your system, simply run command below.
 
 ```bash
-curl -sL raw.githubusercontent.com/zerocool1978/magento2-docker/master/get | bash
+curl -sL raw.githubusercontent.com/cmarin121/magento2-docker/master/get | bash
 ```
 
 ## What is included
