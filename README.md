@@ -71,6 +71,7 @@ All Magento Docker projects initialized with:
 - MariaDB
 - Redis
 - Xdebug
+- Ioncube
 
 And optionally available:
 
