@@ -3,7 +3,7 @@
 <p align="center"><img src="assets/images/install.png" width="600" align="center" alt="zerocool78 Magento Docker environment and toolset" /></p>
 
 
-Mg2 toolset is a system-wide command-line tool for creating and managing simultaneously running Magento Docker projects with insanely easy installation and configuration. It includes plenty of configurable services and useful commands for developing and project orchestration right out of the box. On macOS systems, mutagen.io tool will be bundled in the toolset for high-performance files sync between host and Docker containers.
+Mg2 toolset is a system-wide command-line tool for creating and managing simultaneously running Magento Docker projects with insanely easy installation and configuration. It includes plenty of configurable services and useful commands for developing and project orchestration right out of the box. On macOS systems, mutagen.io tool will be bundled in the toolset for high-performance files sync between host and Docker containers. If this feature fails, you can re-run the installation of mg2.
 
 ## Table of contents
 
@@ -21,7 +21,7 @@ Mg2 toolset is a system-wide command-line tool for creating and managing simulta
 
 This setup assumes you are running Docker on a computer with at least 6GB of allocated RAM, a dual-core, and an SSD hard drive. 
  
-This configuration has been tested on macOS. Linux based systems still require testing. Any testing are welcomed!
+This configuration has been tested on Linux Ubuntu 20.04 environments, with at least 2 vcpus and 8 GB of Ram. Also over OSx Catalina with some issues installing Mutagen, but all other features work well.
 
 ## Installation
 
