@@ -253,16 +253,66 @@ Run varnish command line tools such as `varnishadm`, `varnishhist`, `varnishstat
 ### Connecting to Database
 
 Project database can be easily accessed in a few ways - with help of optional phpMyAdmin service or with database managing applications by using a direct connection to the database via SSH tunnel.
-Read the article at project's wiki page on how to connect to your project's database - <a href="https://github.com/cmarin121/magento2-docker/wiki/Connecting-to-Database" target="_blank">Connecting to Database</a>
+Read the article at project's wiki page on how to connect to your project's database.
+
+Project database can be easily accessed in a few ways - with help of optional phpMyAdmin service or with database managing applications by using a direct connection to the database via SSH tunnel.
+
+## Accessing database with phpMyAdmin
+
+If you have added phpMyAdmin service during project initialization, simply open `https://pma.example.test` where `example` must be replaced with the domain name used on your m2c backed project. If you haven't added phpMyAdmin, you can add phpMyAdmin service to your existing m2c backed project with the command below.
+ 
+````bash
+m2c add phpmyadmin
+````
+
+## Accessing database via SSH tunnel
+
+It is possible to access the database directly by using the SSH tunnel. 
+
+Default access credentials like database name, user and password are all `magento`. Mysql host is the domain name of your project suffixed with `__db`, for example, `example.test__db`. SSH tunnel credentials are `m2c.test` as host, `user` as username with an empty password, and port `33060`.
 
 ### Debugging with Xdebug
 
 Mage2click toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.  
-Read the article at project's wiki page on how to use Xdebug with PHPStorm - <a href="https://github.com/cmarin121/magento2-docker/wiki/Debugging-with-Xdebug" target="_blank">Debugging with Xdebug</a>
+Read the article at project's wiki page on how to use Xdebug with PHPStorm.
+
+Mage2click toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.
+
+In this configuration example, we're covering the PHPStorm IDE.
+
+## Configuration
+
+Open **Servers** preferences section.
+
+```
+Preferences | Languages & Frameworks | PHP | Servers
+```
+
+Add the new server to match your project and configure path mappings. Your project directory must be mapped to `/var/www/html` path. Don't forget to press `Apply` or `OK` button. Check the screenshot below as reference.
+
+After that, go to the **PHP** preferences section.
+
+```
+Preferences | Languages & Frameworks | PHP
+```
+
+Select **PHP language level** to match PHP version used in your Magento project.
+
+For **CLI Interpreter**, click on three dots to add a new one. A new **CLI Interpreters** dialog box will appear, press on plus (+) sign and choose `From Docker, Vagrant, VM, Remote...`
+In the appeared dialog box, select `Docker` and for **Image name** choose mage2click xdebug Docker image with corresponding PHP version to your Magento project, for example `mage2click/m2c:php-fpm-7.2-xdebug-alpine`. Press `OK`.
+Also, press `OK` on **CLI Interpreters** dialogue box.
+Make sure that newly created **CLI Interpreter** is selected and press `OK` on **PHP** preferences section.
+
+## Usage
+
+To start/stop debugging, press `Start/Stop Listening for PHP Debug Connections` button.
+On the browser side, you will need to set `XDEBUG_SESSION` cookie to activate Xdebug or simply use **Xdebug Helper** browser extension for that.  
+
+**IMPORTANT!** Be aware that when you have activated debugging in the browser or have set `XDEBUG_SESSION` cookie value, Xdebug remains active even if you are not activating debugging at IDE side! For best performance, deactivate debugging in the browser or unset `XDEBUG_SESSION` cookie value when you are not debugging.
 
 ### Acknowledgment
 
-Original Project Mage2click by  Dmitry Shkoliar 
+Original Project Mage2click by  Dmitry Shkoliar
 
 ## License
 
