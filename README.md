@@ -250,6 +250,16 @@ mg2 varnish <tool>
 ```
 Run varnish command line tools such as `varnishadm`, `varnishhist`, `varnishstat`, `varnishtop`, `varnishtest`, `varnishlog` etc.
 
+### Connecting to Database
+
+Project database can be easily accessed in a few ways - with help of optional phpMyAdmin service or with database managing applications by using a direct connection to the database via SSH tunnel.
+Read the article at project's wiki page on how to connect to your project's database - <a href="https://github.com/mage2click/m2c/wiki/Connecting-to-Database" target="_blank">Connecting to Database</a>
+
+### Debugging with Xdebug
+
+Mage2click toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.  
+Read the article at project's wiki page on how to use Xdebug with PHPStorm - <a href="https://github.com/mage2click/m2c/wiki/Debugging-with-Xdebug" target="_blank">Debugging with Xdebug</a>
+
 ### Acknowledgment
 
 Original Project Mage2click by  Dmitry Shkoliar 
