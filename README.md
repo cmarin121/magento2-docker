@@ -262,7 +262,7 @@ Project database can be easily accessed in a few ways - with help of optional ph
 If you have added phpMyAdmin service during project initialization, simply open `https://pma.example.test` where `example` must be replaced with the domain name used on your m2c backed project. If you haven't added phpMyAdmin, you can add phpMyAdmin service to your existing m2c backed project with the command below.
  
 ````bash
-m2c add phpmyadmin
+mg2 add phpmyadmin
 ````
 
 ## Accessing database via SSH tunnel
