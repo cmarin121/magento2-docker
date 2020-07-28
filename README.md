@@ -259,7 +259,7 @@ Project database can be easily accessed in a few ways - with help of optional ph
 
 ## Accessing database with phpMyAdmin
 
-If you have added phpMyAdmin service during project initialization, simply open `https://pma.example.test` where `example` must be replaced with the domain name used on your mg2 backed project. If you haven't added phpMyAdmin, you can add phpMyAdmin service to your existing m2c backed project with the command below.
+If you have added phpMyAdmin service during project initialization, simply open `https://pma.example.test` where `example` must be replaced with the domain name used on your mg2 backed project. If you haven't added phpMyAdmin, you can add phpMyAdmin service to your existing mg2 backed project with the command below.
  
 ````bash
 mg2 add phpmyadmin
@@ -269,14 +269,14 @@ mg2 add phpmyadmin
 
 It is possible to access the database directly by using the SSH tunnel. 
 
-Default access credentials like database name, user and password are all `magento`. Mysql host is the domain name of your project suffixed with `__db`, for example, `example.test__db`. SSH tunnel credentials are `m2c.test` as host, `user` as username with an empty password, and port `33060`.
+Default access credentials like database name, user and password are all `magento`. Mysql host is the domain name of your project suffixed with `__db`, for example, `example.test__db`. SSH tunnel credentials are `mg2.test` as host, `user` as username with an empty password, and port `33060`.
 
 ### Debugging with Xdebug
 
-Mage2click toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.  
+mg2 toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.  
 Read the article at project's wiki page on how to use Xdebug with PHPStorm.
 
-Mage2click toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.
+mg2 toolset supports Magento debugging with Xdebug out of the box. Only a few configuration steps are required.
 
 In this configuration example, we're covering the PHPStorm IDE.
 
