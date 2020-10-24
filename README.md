@@ -23,9 +23,41 @@ This setup assumes you are running Docker on a computer with at least 6GB of all
  
 This configuration has been tested on Linux Ubuntu 20.04 environments, with at least 2 vcpus and 8 GB of Ram. Also over OSx Catalina with some issues installing Mutagen, but all other features work well.
 
+For Docker isntallation on ubuntu systems do you can run in your CLI the following commands
+
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+    
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
+```
+For OSX systems (Mac) you cam follow the next guide from de docker page:
+
+<a href="https://containo.us/traefik" target="_blank">https://containo.us/traefik</a>
+
+
 ## Installation
 
-To install zerocool78 toolset to your system, simply run command below.
+To install MG2 toolset to your system, simply run command below.
 
 ```bash
 curl -sL raw.githubusercontent.com/cmarin121/magento2-docker/master/get | bash
