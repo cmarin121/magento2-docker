@@ -52,7 +52,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
 ```
 For OSX systems (Mac) you cam follow the next guide from de docker page:
 
-<a href="https://containo.us/traefik" target="_blank">https://containo.us/traefik</a>
+<a href="https://containo.us/traefik" target="_blank">https://docs.docker.com/docker-for-mac/install/</a>
 
 
 ## Installation
